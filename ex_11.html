@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 11</title>
+</head>
+<body>
+    <h1>Frequência</h1>
+    Insira a frequência: <input type="number" id="ipt_frequencia"><br><br>
+    <button onclick="analisar()">Analisar frequência do aluno</button><br><br>
+    <img id="img_resultado" style="max-height: 300px; display: none;">
+</body>
+</html>
+ <script>
+        function analisar() {
+            let frequencia = Number(ipt_frequencia.value);
+            let imagem = document.getElementById("img_resultado");
+            imagem.style.display = "block";
+
+            if (frequencia < 50) {
+                imagem.src = "https://i.pinimg.com/736x/89/44/6d/89446d0005d38a1d5062810666dbeeee.jpg";
+                imagem.alt = "turista";
+            } else {
+                imagem.src = "https://i.pinimg.com/736x/1f/de/bb/1fdebbefa924ac2a974df9ed295b1e49.jpg";
+                imagem.alt = "estudioso";
+            }
+        }
+    </script>

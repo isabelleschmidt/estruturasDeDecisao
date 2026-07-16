@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 08</title>
+</head>
+<body>
+    <h1>Sitcoms s2 </h1>
+    Insira a última série assistida: <input type="text" id="ipt_serie"><br>
+    Insira o total de episódios assistidos: <input type="number" id="ipt_eps"><br>
+    <button onclick="verificar()"> Verificar nível</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        let serie = (ipt_serie.value);
+        let episodios = Number(ipt_eps.value) * 22;
+        let horas = 60 
+        let contagem = episodios / horas
+        div_msg.innerHTML = `Você assistiu ${contagem.toFixed(2)} horas da série friends.`
+        if (contagem > 30) {
+        div_msg.innerHTML = `Você assistiu ${contagem.toFixed(2)} horas da série friends. <br>
+        Uau! Você realmente gosta dessa série!!`
+
+        }
+    }
+</script>

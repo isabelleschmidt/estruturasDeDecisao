@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 15</title>
+</head>
+<body>
+    <h1>Termômetro</h1><br>
+    Insira a temperatura: <input type="number" id="ipt_temperatura"><br>
+    <button onclick="analisar()">Analisar Temperatura</button><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+    let temperatura = Number(ipt_temperatura.value);
+      if (temperatura < 14) {
+       div_msg.innerHTML = `Congelante`
+      } else {
+       if (temperatura <= 21) {
+      div_msg.innerHTML = `Com Frio`
+      } else {
+        if (temperatura <= 24) {
+      div_msg.innerHTML = `Confortável`
+        } else {
+            if (temperatura <= 31) {
+           div_msg.innerHTML = `Com Calor`
+            } else {
+            div_msg.innerHTML = `Calor escaldante`
+            }
+         }
+        }
+      }
+    }
+</script>

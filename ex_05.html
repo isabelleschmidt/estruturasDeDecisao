@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 05</title>
+</head>
+
+<body>
+    <h1>Financiamento</h1><br>
+    Insira o valor da renda familiar: <input type="number" id="ipt_renda"><br>
+    Insira o valor da prestação: <input type="number" id="ipt_prestacao"><br>
+    <button onclick="verificar()">Verificar financiamento</button><br>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+<script>
+    function verificar() {
+        let renda = Number(ipt_renda.value);
+        let prestacao = Number(ipt_prestacao.value);
+        let financiamento = (prestacao / renda) * 100
+        div_msg.innerHTML = `A prestação corresponde a ${financiamento}% da renda familiar`
+
+        if (financiamento > 30) {
+            div_msg.innerHTML = `A prestação corresponde a ${financiamento}% da renda familiar <br>
+            Será necessário completar a renda familiar.`
+        }
+    }
+</script>

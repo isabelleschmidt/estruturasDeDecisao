@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 04</title>
+</head>
+<body>
+    <h1>Rachando a pizza</h1><br>
+    Valor da pizza: <input type="number" id="ipt_pizza"><br>
+    Quantidade de amigos: <input type="number" id="ipt_amigos"><br>
+    <button onclick="rola()">Rola a pizza</button><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script> 
+   function rola(){
+    let pizza = Number(ipt_pizza.value);
+    let amigos = Number(ipt_amigos.value);
+    let qtoPcada = pizza / amigos;
+    div_msg.innerHTML = `Cada amigo vai pagar R$${qtoPcada.toFixed(2)} pela pizza.`
+    if (qtoPcada > 20) {
+        div_msg.innerHTML = `Cada amigo vai pagar R$${qtoPcada.toFixed(2)} pela pizza. <br>
+        Deu ruim! Pizza muito cara!`
+    }
+   }
+</script>

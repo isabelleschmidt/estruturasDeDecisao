@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 02</title>
+</head>
+<body>
+    <h1>Refris do Joka</h1><br>
+    Latas de refri bebidas por dia: <input type="number" id="ipt_latas"><br>
+    <button onclick="qtdRefris()">Quantidade de refris</button><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function qtdRefris(){
+        let latas = Number(ipt_latas.value);
+        let qtdAoDia = latas * 365
+        div_msg.innerHTML = `A quantidade de refris bebidos por ano é: ${qtdAoDia}`
+        if (qtdAoDia >= 500) {
+            div_msg.innerHTML = `A quantidade de refris bebidos por ano é: ${qtdAoDia}<br>
+            Cuidado com a diabetes!`
+        }
+    }
+</script>
